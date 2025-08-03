@@ -316,7 +316,7 @@
 
     .card {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
     }
 
     .card i {
@@ -330,6 +330,13 @@
   }
 </style>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const year = document.getElementById("copyrightYear");
+    year.innerHTML = new Date().getFullYear();
+  });
+</script>
+
 
 </head>
 <body>
@@ -340,7 +347,7 @@
       <p>Full-Stack Developer from Siliguri, India with 2+ years of experience building scalable web applications using Laravel, Django & React.</p>
       <a href="mailto:iambijoysharmadev@gmail.com" target="_blank">
         <button>
-          Contact Me
+          ✉️ Contact Me
         </button>
       </a>
     </div>
@@ -427,7 +434,9 @@
   </section>
 
   <div class="footer">
-    © 2025 Bijoy Sharma. All rights reserved. 📍 Siliguri, West Bengal · 📞 +91 7872944208 · ✉️ iambijoysharmadev@gmail.com
+    © <span id="copyrightYear"></span> Bijoy Sharma.
+    <br>
+    📍 Siliguri, West Bengal · 📞 +91 7872944208 ·
   </div>
 
 </body>
